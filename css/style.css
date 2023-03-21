@@ -2,4 +2,10 @@ body {
   font-family: "Roboto", "Shrikhand", sans-serif, cursive;
 }
 
+.barre {
+  display: inline-block;
+  border-bottom: 2px solid black;
+  width: 50%;
+}
+
 /*# sourceMappingURL=style.css.map */
