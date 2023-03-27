@@ -1,0 +1,206 @@
+body {
+  max-width: 1400px;
+  margin: 0;
+  font-family: "Roboto", "Shrikhand", sans-serif, cursive;
+  text-align: center;
+  background: #F7F7F7;
+}
+
+* {
+  transition: all 0.3s ease;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.menu {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-family: "Shrikhand";
+  font-size: 4vw;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  background-color: white;
+}
+.menu h1 {
+  margin: 8px;
+  font-weight: normal;
+}
+.menu a {
+  position: absolute;
+  font-size: 5vw;
+  left: 23px;
+}
+
+.banniere {
+  width: 100%;
+  height: 66vw;
+}
+.banniere img {
+  height: 100%;
+  z-index: -1;
+  position: relative;
+  width: 100%;
+}
+.banniere__cover img {
+  object-fit: cover;
+}
+
+.carte {
+  margin-top: -65px;
+  background-color: #f5f6f6;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  padding: 5px 17px;
+}
+.carte__liste {
+  margin-bottom: 13%;
+  text-align: left;
+}
+.carte__nom {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  font-size: 5vw;
+}
+.carte__nom h2 {
+  font-family: "Shrikhand";
+  font-weight: normal;
+}
+.carte__nom i {
+  font-size: 7vw;
+  margin-right: 21px;
+}
+.carte h3 {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 4.5vw;
+  flex-direction: column;
+  display: flex;
+  text-transform: uppercase;
+}
+.carte h3 span {
+  border: 2px solid #99E2D0;
+  margin-top: 4px;
+  width: 12%;
+}
+.carte__plats {
+  margin-bottom: 4%;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  font-size: 4.5vw;
+}
+.carte__plats__infos {
+  width: 100%;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 18vw;
+  display: flex;
+}
+.carte__plats__infos__div-info {
+  width: 83%;
+  margin: 14px;
+}
+.carte__plats__infos span {
+  margin: 5%;
+}
+.carte__plats__infos label {
+  margin: 3%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.carte__plats__infos p {
+  font-weight: 300;
+  margin: 1% 0;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 3.9vw;
+  text-overflow: ellipsis;
+}
+.carte__plats__infos:hover .carte__plats__infos__checkbox {
+  width: 30%;
+}
+.carte__plats__infos__checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99E2D0;
+  width: 0%;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.carte__plats__infos__checkbox input {
+  z-index: 1;
+  position: absolute;
+  opacity: 0;
+}
+.carte__plats__infos__checkbox input[type=checkbox]:checked + .checkbox-icon .fa-circle {
+  opacity: 0;
+}
+.carte__plats__infos__checkbox input[type=checkbox]:checked + .checkbox-icon .fa-check {
+  opacity: 1;
+}
+.carte__plats__infos__checkbox .fa-circle {
+  position: absolute;
+  font-size: 7vw;
+  color: white;
+}
+.carte__plats__infos__checkbox .fa-check {
+  opacity: 0;
+  border-radius: 50px;
+  background-color: #ffffff;
+  font-size: 4vw;
+  display: flex;
+  padding: 6px;
+  color: #99E2D0;
+}
+
+.btn-commander {
+  padding: 4% 14%;
+  font-weight: 500;
+  font-size: 4vw;
+  line-height: 19px;
+  color: white;
+  background: linear-gradient(0deg, #9356DC -5.2%, #FF79DA 110.74%);
+  border: none;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+}
+
+footer {
+  margin-top: 10%;
+  background-color: #353535;
+  padding: 5px 25px 25px 15px;
+  color: white;
+  text-align: left;
+  font-size: 4vw;
+}
+footer h3 {
+  font-family: "Shrikhand";
+  font-weight: normal;
+}
+footer li {
+  list-style: none;
+  margin: 7px 0;
+}
+footer a {
+  color: white;
+}
+footer i {
+  margin-right: 7%;
+  width: 3vw;
+}
+
+/*# sourceMappingURL=restaurants.css.map */
