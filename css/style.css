@@ -132,30 +132,37 @@ a {
   display: flex;
   background-color: white;
   margin-top: 57px;
-  justify-content: center;
   padding: 30px 20px 68px 20px;
+  justify-content: center;
+  align-items: center;
 }
 
 .fonctionnement {
+  display: flex;
   text-align: left;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+}
+.fonctionnement h2 {
+  width: 965px;
 }
 .fonctionnement__div-infos {
   display: flex;
-  margin-top: 26px;
+  margin-left: 22px;
+  width: 600px;
   justify-content: center;
-  padding-left: 2%;
 }
 .fonctionnement__div-infos__instruction {
   position: relative;
-  margin-right: 9%;
   display: flex;
   align-items: center;
-  padding: 6% 14% 6% 5%;
+  padding: 25px 91px 25px 21px;
   border-radius: 20px;
   background-color: #f7f7f7;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  margin: 0 20px;
   white-space: nowrap;
-  text-overflow: ellipsis;
 }
 .fonctionnement__div-infos__instruction:hover {
   background-color: #f5edff;
@@ -166,8 +173,8 @@ a {
 .fonctionnement__div-infos__instruction span {
   position: absolute;
   left: -17px;
-  width: 7vw;
-  height: 7vw;
+  width: 25px;
+  height: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -175,35 +182,44 @@ a {
   border-radius: 50%;
   color: white;
 }
-.fonctionnement__div-infos__instruction i {
+.fonctionnement__div-infos i {
   margin-right: 6%;
   color: #7e7e7e;
 }
 
 .restaurants {
   text-align: left;
-  padding: 3% 0%;
-  margin-left: 8%;
-  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  padding: 2% 0%;
+}
+.restaurants h2 {
+  width: 965px;
 }
 .restaurants__liste {
   display: flex;
   column-gap: 32px;
+  flex-wrap: wrap;
+  width: 958px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 17px;
+  height: 528px;
+  align-content: space-between;
   position: relative;
 }
 
 .article {
   position: relative;
   border-radius: 15px;
-  width: 100%;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   background-color: white;
-  margin-bottom: 18px;
   overflow: hidden;
 }
 .article__divs-img {
-  width: 335px;
-  height: 200px;
+  width: 431px;
+  height: 154px;
 }
 .article__divs-img span {
   position: absolute;
@@ -241,7 +257,7 @@ a {
   justify-content: center;
   display: flex;
   align-items: stretch;
-  font-size: 5.5vw;
+  font-size: 2.1em;
 }
 .article__infos__jaime input {
   position: absolute;
@@ -302,8 +318,33 @@ footer i {
 }
 
 @media screen and (max-width: 1013px) {
+  .fonctionnement h2 {
+    width: 691px;
+  }
+
+  .fonctionnement__div-infos {
+    font-size: 14px;
+    width: 109px;
+  }
+
   .fonctionnement__div-infos__instruction {
-    font-size: 1.4vw;
+    padding: 16% 27% 16% 11%;
+  }
+
+  .restaurants h2 {
+    width: 691px;
+  }
+  .restaurants__liste {
+    width: 696px;
+    height: 510px;
+  }
+
+  .article__divs-img {
+    width: 326px;
+    height: 154px;
+  }
+  .article__infos__jaime {
+    font-size: 1.8em;
   }
 
   footer {
@@ -352,6 +393,10 @@ footer i {
     padding: 27px 0px;
     font-size: 4.2vw;
     margin: 0 3% 37px 3%;
+  }
+  .fonctionnement__div-infos__instruction span {
+    width: 7vw;
+    height: 7vw;
   }
   .fonctionnement__div-infos__instruction i {
     margin-left: 9%;
