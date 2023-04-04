@@ -353,11 +353,32 @@ footer i {
 }
 @media screen and (max-width: 768px) {
   .menu {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-family: "Shrikhand";
     font-size: 4vw;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    background-color: white;
+  }
+  .menu h1 {
+    margin: 8px;
+    font-weight: normal;
   }
 
   .localisation {
+    background-color: #EAEAEA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 4.5vw;
+  }
+  .localisation i {
+    margin-right: 13px;
   }
 
   .h2-description {
@@ -366,11 +387,20 @@ footer i {
   }
 
   .p-description {
+    color: #353535;
+    font-weight: 300;
     font-size: 4.5vw;
+    margin: 20px 30px;
   }
 
   .btn-explorer-restau {
+    padding: 13px 16px;
     font-size: 3.9vw;
+    color: white;
+    background: linear-gradient(0deg, #9356DC -5.2%, #FF79DA 110.74%);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    border: none;
   }
 
   .conteneur {
@@ -380,26 +410,35 @@ footer i {
 
   .fonctionnement {
     padding: 9% 5%;
+    display: block;
+    width: auto;
   }
   .fonctionnement h2 {
     font-size: 6.5vw;
     margin: 0;
+    width: auto;
   }
   .fonctionnement__div-infos {
+    display: flex;
     flex-direction: column;
     margin-top: 8%;
+    width: auto;
   }
   .fonctionnement__div-infos__instruction {
     padding: 27px 0px;
     font-size: 4.2vw;
     margin: 0 3% 37px 3%;
+    white-space: nowrap;
   }
   .fonctionnement__div-infos__instruction span {
+    left: -17px;
     width: 7vw;
     height: 7vw;
   }
   .fonctionnement__div-infos__instruction i {
     margin-left: 9%;
+    margin-right: 6%;
+    color: #7E7E7E;
   }
 
   .restaurants {
@@ -407,42 +446,75 @@ footer i {
     padding: 0% 5%;
     margin-left: 0%;
     margin-bottom: 6%;
-  }
-  .restaurants__liste {
     display: block;
   }
   .restaurants h2 {
+    width: auto;
     font-size: 7vw;
+  }
+  .restaurants__liste {
+    display: block;
+    margin: auto;
+    width: auto;
+    height: auto;
   }
 
   .article {
+    border-radius: 15px;
+    width: 100%;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    background-color: white;
     margin-bottom: 7%;
+    overflow: hidden;
   }
   .article__divs-img {
     width: 100%;
     height: 44vw;
   }
   .article__divs-img span {
+    position: absolute;
+    right: 18px;
+    margin: 5%;
+    padding: 7px 8px;
+    color: #008766;
+    background: #99E2D0;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    font-weight: 500;
     font-size: 4vw;
+    border-radius: 2px;
+  }
+  .article img {
+    height: 100%;
+    width: 100%;
+  }
+  .article__cover img {
+    object-fit: cover;
+  }
+  .article__infos {
+    margin: 16px 12px;
+    display: flex;
+    justify-content: space-between;
   }
   .article__infos h3 {
+    margin: 0;
     font-size: 5.5vw;
   }
   .article__infos p {
+    margin: 5px 0;
     font-size: 5vw;
   }
-  .article__infos button {
-    font-size: 6vw;
-    margin-right: 5%;
-  }
-  .article__infos button .fa-solid {
-    font-size: 6vw;
-  }
-  .article__infos button .fa-regular {
-    position: absolute;
+  .article__infos__jaime {
+    border: none;
+    background-color: transparent;
+    margin-right: 9%;
+    justify-content: center;
+    display: flex;
+    align-items: stretch;
+    font-size: 5.5vw;
   }
 
   footer {
+    margin-top: 12%;
     background-color: #353535;
     padding: 5px 25px 25px 15px;
     color: white;
@@ -468,7 +540,8 @@ footer i {
     color: white;
   }
   footer i {
-    width: 7vw;
+    margin-right: 7%;
+    width: 3vw;
   }
 }
 

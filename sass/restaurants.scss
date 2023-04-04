@@ -67,6 +67,7 @@ form {
   width: 40%;
   padding: 1em 14em 3em 14em;
 
+
   &__liste {
     opacity: 0;
     margin-bottom: 9%;
@@ -314,7 +315,7 @@ footer {
 
 @media screen and (max-width: 1013px) {
   .carte {
-  width: auto;
+    width: auto;
     padding: 1em 4em 3em 4em;
   }
 
@@ -373,12 +374,14 @@ footer {
     border-top-right-radius: 30px;
     border-top-left-radius: 30px;
     padding: 15px 17px;
+    width: 91vw;
 
     &__liste {
       opacity: 0;
       margin-bottom: 13%;
       text-align: left;
       animation: 1s cubic-bezier(0.72, -0.71, 0.19, 1.71) forwards swashIn;
+      width: auto;
     }
 
     &__nom {
@@ -395,6 +398,7 @@ footer {
         display: flex;
         align-items: center;
         font-size: 5.5vw;
+        margin: 0;
 
         input {
           position: absolute;
@@ -447,7 +451,7 @@ footer {
       span {
         border: 2px solid #99e2d0;
         margin-top: 4px;
-        width: 12%;
+        width: 7%;
       }
     }
 
@@ -548,31 +552,43 @@ footer {
   }
 
   footer {
-    margin-top: 10%;
+    margin-top: 12%;
     background-color: #353535;
     padding: 5px 25px 25px 15px;
     color: white;
     text-align: left;
     font-size: 4vw;
 
-    h3 {
-      font-family: "Shrikhand";
-      font-weight: normal;
+    .footer__blocs-navs {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+
+      h3 {
+        font-family: "Shrikhand";
+        font-weight: normal;
+      }
+
+      nav {
+        display: block;
+
+        li {
+          list-style: none;
+          margin: 7px 0;
+
+          a {
+            color: white;
+
+            i {
+              margin-right: 7%;
+              width: 5vw;
+            }
+          }
+        }
+      }
     }
 
-    li {
-      list-style: none;
-      margin: 7px 0;
-    }
 
-    a {
-      color: white;
-    }
-
-    i {
-      margin-right: 7%;
-      width: 3vw;
-    }
   }
+
 
 }

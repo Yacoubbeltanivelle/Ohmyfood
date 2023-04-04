@@ -322,12 +322,14 @@ footer h3 {
     border-top-right-radius: 30px;
     border-top-left-radius: 30px;
     padding: 15px 17px;
+    width: 91vw;
   }
   .carte__liste {
     opacity: 0;
     margin-bottom: 13%;
     text-align: left;
     animation: 1s cubic-bezier(0.72, -0.71, 0.19, 1.71) forwards swashIn;
+    width: auto;
   }
   .carte__nom {
     justify-content: space-around;
@@ -343,6 +345,7 @@ footer h3 {
     display: flex;
     align-items: center;
     font-size: 5.5vw;
+    margin: 0;
   }
   .carte__nom__jaime input {
     position: absolute;
@@ -384,7 +387,7 @@ footer h3 {
   .carte h3 span {
     border: 2px solid #99e2d0;
     margin-top: 4px;
-    width: 12%;
+    width: 7%;
   }
   .carte__plats {
     margin-bottom: 4%;
@@ -468,27 +471,34 @@ footer h3 {
   }
 
   footer {
-    margin-top: 10%;
+    margin-top: 12%;
     background-color: #353535;
     padding: 5px 25px 25px 15px;
     color: white;
     text-align: left;
     font-size: 4vw;
   }
-  footer h3 {
+  footer .footer__blocs-navs {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+  footer .footer__blocs-navs h3 {
     font-family: "Shrikhand";
     font-weight: normal;
   }
-  footer li {
+  footer .footer__blocs-navs nav {
+    display: block;
+  }
+  footer .footer__blocs-navs nav li {
     list-style: none;
     margin: 7px 0;
   }
-  footer a {
+  footer .footer__blocs-navs nav li a {
     color: white;
   }
-  footer i {
+  footer .footer__blocs-navs nav li a i {
     margin-right: 7%;
-    width: 3vw;
+    width: 5vw;
   }
 }
 
