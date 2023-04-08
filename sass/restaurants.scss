@@ -133,6 +133,7 @@ form {
   h3 {
     font-style: normal;
     font-weight: 300;
+    /* font-size: 4.5vw; */
     flex-direction: column;
     display: flex;
     text-transform: uppercase;
@@ -161,14 +162,18 @@ form {
 
       &__div-info {
         width: 83%;
+        font-size: 1.17;
         margin: 14px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
       }
 
       span {
         margin: 16px;
+      }
+
+      label {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
 
       p {
@@ -274,34 +279,27 @@ footer {
 
   .footer__blocs-navs {
     justify-content: flex-end;
+    align-items: center;
     display: flex;
 
     nav {
-      justify-content: flex-end;
-      align-items: center;
       display: flex;
+      justify-content: end;
+      margin-right: 4%;
 
-      ul {
-        display: flex;
-        justify-content: end;
-        margin-right: 4%;
+      li {
+        list-style: none;
+        margin: 0 4%;
+        white-space: nowrap;
 
-        li {
-          list-style: none;
-          margin: 0 4%;
-          white-space: nowrap;
+        a {
+          color: white;
 
-          a {
-            color: white;
-
-            i {
-              margin-right: 7%;
-            }
+          i {
+            margin-right: 7%;
           }
         }
       }
-
-
 
     }
   }
@@ -376,8 +374,7 @@ footer {
     border-top-right-radius: 30px;
     border-top-left-radius: 30px;
     padding: 15px 17px;
-    padding-bottom: 12%;
-    width: 100%;
+    width: 91vw;
 
     &__liste {
       opacity: 0;
@@ -476,23 +473,17 @@ footer {
         &__div-info {
           width: 83%;
           margin: 14px;
-          margin: 3%;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-
-          span {
-            font-weight: 300;
-            margin: 1% 0;
-            white-space: nowrap;
-            overflow: hidden;
-            font-size: 3.9vw;
-            text-overflow: ellipsis;
-          }
         }
 
         span {
           margin: 5%;
+        }
+
+        label {
+          margin: 3%;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
 
         p {
@@ -561,6 +552,7 @@ footer {
   }
 
   footer {
+    margin-top: 12%;
     background-color: #353535;
     padding: 5px 25px 25px 15px;
     color: white;
@@ -574,32 +566,28 @@ footer {
       h3 {
         font-family: "Shrikhand";
         font-weight: normal;
-        margin-bottom: unset;
       }
 
       nav {
         display: block;
 
-        ul {
-          display: block;
+        li {
           list-style: none;
-          padding: 0;
+          margin: 7px 0;
 
-          li {
-            margin: 9px 0;
+          a {
+            color: white;
 
-            a {
-              color: white;
-
-              i {
-                margin-right: 7%;
-                width: 5vw;
-              }
+            i {
+              margin-right: 7%;
+              width: 5vw;
             }
           }
         }
       }
     }
+
+
   }
 
 
