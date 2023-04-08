@@ -334,13 +334,35 @@ footer {
 
   .footer__blocs-navs {
     justify-content: flex-end;
-    align-items: center;
     display: flex;
 
     nav {
+      justify-content: flex-end;
+      align-items: center;
       display: flex;
-      justify-content: end;
-      margin-right: 4%;
+
+      ul {
+        display: flex;
+        justify-content: end;
+        margin-right: 4%;
+
+        li {
+          list-style: none;
+          margin: 0 4%;
+          white-space: nowrap;
+
+          a {
+            color: white;
+
+            i {
+              margin-right: 7%;
+            }
+          }
+        }
+      }
+
+
+
     }
   }
 
@@ -348,20 +370,6 @@ footer {
     font-family: "Shrikhand";
     font-weight: normal;
     margin-right: 7%;
-  }
-
-  li {
-    list-style: none;
-    margin: 0 4%;
-    white-space: nowrap;
-  }
-
-  a {
-    color: white;
-  }
-
-  i {
-    width: 31px;
   }
 }
 
@@ -431,8 +439,8 @@ footer {
     background-color: white;
 
     h1 {
-       margin: 8px;
-       font-weight: normal;
+      margin: 8px;
+      font-weight: normal;
     }
   }
 
@@ -444,13 +452,13 @@ footer {
     font-size: 4.5vw;
 
     i {
-        margin-right: 13px;
+      margin-right: 13px;
     }
   }
 
   .h2-description {
     margin: 9% 10% 3% 10%;
-      font-size: 7vw;
+    font-size: 7vw;
 
   }
 
@@ -478,39 +486,39 @@ footer {
 
   .fonctionnement {
     padding: 9% 5%;
-display: block;
-width: auto;
+    display: block;
+    width: auto;
 
     h2 {
-        font-size: 6.5vw;
-        margin: 0;
-        width: auto;
+      font-size: 6.5vw;
+      margin: 0;
+      width: auto;
     }
 
     &__div-infos {
-        display: flex;
-        flex-direction: column;
-        margin-top: 8%;
-        width: auto;
+      display: flex;
+      flex-direction: column;
+      margin-top: 8%;
+      width: auto;
 
-        &__instruction {
-          padding: 27px 0px;
-          font-size: 4.2vw;
-          margin: 0 3% 37px 3%;
-          white-space: nowrap;
+      &__instruction {
+        padding: 27px 0px;
+        font-size: 4.2vw;
+        margin: 0 3% 37px 3%;
+        white-space: nowrap;
 
-            span {
-              left: -17px;
-              width: 7vw;
-              height: 7vw;
-            }
-
-            i {
-              margin-left: 9%;
-margin-right: 6%;
-                color: #7E7E7E;
-            }
+        span {
+          left: -17px;
+          width: 7vw;
+          height: 7vw;
         }
+
+        i {
+          margin-left: 9%;
+          margin-right: 6%;
+          color: #7E7E7E;
+        }
+      }
     }
   }
 
@@ -524,14 +532,14 @@ margin-right: 6%;
 
     h2 {
       width: auto;
-font-size: 7vw;
+      font-size: 7vw;
     }
 
     &__liste {
       display: block;
-margin: auto;
-width: auto;
-height: auto;
+      margin: auto;
+      width: auto;
+      height: auto;
     }
   }
 
@@ -607,30 +615,36 @@ height: auto;
 
     .footer__blocs-navs {
       flex-direction: column-reverse;
-align-items: flex-start;
+      align-items: flex-start;
 
-nav {
-  display: block;
-}
-    }
+      h3 {
+        font-family: "Shrikhand";
+        font-weight: normal;
+        margin-bottom: unset;
+      }
 
-    h3 {
-      font-family: "Shrikhand";
-      font-weight: normal;
-    }
+      nav {
+        display: block;
 
-    li {
-      list-style: none;
-      margin: 7px 0;
-    }
+        ul {
+          display: block;
+          list-style: none;
+          padding: 0;
 
-    a {
-      color: white;
-    }
+          li {
+            margin: 9px 0;
 
-    i {
-      margin-right: 7%;
-      width: 3vw;
+            a {
+              color: white;
+
+              i {
+                margin-right: 7%;
+                width: 5vw;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
