@@ -116,7 +116,6 @@ form {
 .carte h3 {
   font-style: normal;
   font-weight: 300;
-  /* font-size: 4.5vw; */
   flex-direction: column;
   display: flex;
   text-transform: uppercase;
@@ -143,16 +142,13 @@ form {
 }
 .carte__plats__infos__div-info {
   width: 83%;
-  font-size: 1.17;
   margin: 14px;
-}
-.carte__plats__infos span {
-  margin: 16px;
-}
-.carte__plats__infos label {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+.carte__plats__infos span {
+  margin: 16px;
 }
 .carte__plats__infos p {
   font-weight: 300;
@@ -243,23 +239,27 @@ footer {
 }
 footer .footer__blocs-navs {
   justify-content: flex-end;
-  align-items: center;
   display: flex;
 }
 footer .footer__blocs-navs nav {
+  justify-content: flex-end;
+  align-items: center;
+  display: flex;
+}
+footer .footer__blocs-navs nav ul {
   display: flex;
   justify-content: end;
   margin-right: 4%;
 }
-footer .footer__blocs-navs nav li {
+footer .footer__blocs-navs nav ul li {
   list-style: none;
   margin: 0 4%;
   white-space: nowrap;
 }
-footer .footer__blocs-navs nav li a {
+footer .footer__blocs-navs nav ul li a {
   color: white;
 }
-footer .footer__blocs-navs nav li a i {
+footer .footer__blocs-navs nav ul li a i {
   margin-right: 7%;
 }
 footer h3 {
@@ -276,6 +276,10 @@ footer h3 {
 
   .carte__liste {
     width: 500px;
+  }
+
+  footer {
+    font-size: 1.6vw;
   }
 }
 @media screen and (max-width: 768px) {
@@ -322,7 +326,8 @@ footer h3 {
     border-top-right-radius: 30px;
     border-top-left-radius: 30px;
     padding: 15px 17px;
-    width: 91vw;
+    padding-bottom: 12%;
+    width: 100%;
   }
   .carte__liste {
     opacity: 0;
@@ -407,15 +412,21 @@ footer h3 {
   .carte__plats__infos__div-info {
     width: 83%;
     margin: 14px;
-  }
-  .carte__plats__infos span {
-    margin: 5%;
-  }
-  .carte__plats__infos label {
     margin: 3%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+  .carte__plats__infos__div-info span {
+    font-weight: 300;
+    margin: 1% 0;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 3.9vw;
+    text-overflow: ellipsis;
+  }
+  .carte__plats__infos span {
+    margin: 5%;
   }
   .carte__plats__infos p {
     font-weight: 300;
@@ -471,7 +482,6 @@ footer h3 {
   }
 
   footer {
-    margin-top: 12%;
     background-color: #353535;
     padding: 5px 25px 25px 15px;
     color: white;
@@ -485,18 +495,23 @@ footer h3 {
   footer .footer__blocs-navs h3 {
     font-family: "Shrikhand";
     font-weight: normal;
+    margin-bottom: unset;
   }
   footer .footer__blocs-navs nav {
     display: block;
   }
-  footer .footer__blocs-navs nav li {
+  footer .footer__blocs-navs nav ul {
+    display: block;
     list-style: none;
-    margin: 7px 0;
+    padding: 0;
   }
-  footer .footer__blocs-navs nav li a {
+  footer .footer__blocs-navs nav ul li {
+    margin: 9px 0;
+  }
+  footer .footer__blocs-navs nav ul li a {
     color: white;
   }
-  footer .footer__blocs-navs nav li a i {
+  footer .footer__blocs-navs nav ul li a i {
     margin-right: 7%;
     width: 5vw;
   }
