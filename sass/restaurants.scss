@@ -72,7 +72,7 @@ form {
     opacity: 0;
     margin-bottom: 9%;
     text-align: left;
-    animation: 1s cubic-bezier(0.72, -0.71, 0.19, 1.71) forwards swashIn;
+    animation: 1s cubic-bezier(0.72, -0.71, 0.19, 1.71) forwards apparitions;  // Animation Entrées Plats Desserts
   }
 
   &__nom {
@@ -104,20 +104,16 @@ form {
         opacity: 0;
         transition: opacity 0.4s, font-size 0.2s;
         z-index: 1;
-        background: -webkit-gradient(linear,
-            left top,
-            left bottom,
-            from(#9356dc),
-            to(#ff79da));
-        background-clip: border-box;
+        background: linear-gradient(to bottom, #9356dc, #ff79da);
+        background-clip: text;
         -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        color: transparent;
       }
 
       .fa-regular {
         position: absolute;
       }
-
+      // Animation du coeur
       input[type="checkbox"]:checked+.fa-solid {
         opacity: 1;
       }
@@ -133,7 +129,6 @@ form {
   h3 {
     font-style: normal;
     font-weight: 300;
-    /* font-size: 4.5vw; */
     flex-direction: column;
     display: flex;
     text-transform: uppercase;
@@ -162,18 +157,14 @@ form {
 
       &__div-info {
         width: 83%;
-        font-size: 1.17;
         margin: 14px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
 
       span {
         margin: 16px;
-      }
-
-      label {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
       }
 
       p {
@@ -185,7 +176,7 @@ form {
         text-overflow: ellipsis;
       }
 
-      &:hover .carte__plats__infos__checkbox {
+      &:hover .carte__plats__infos__checkbox { // Animation coche coté droit
         width: 88px;
       }
 
@@ -219,7 +210,9 @@ form {
   }
 }
 
-@keyframes swashIn {
+
+// Animation Entrées Plats Desserts
+@keyframes apparitions {
   0% {
     opacity: 0;
     transform-origin: 50% 50%;
@@ -279,27 +272,34 @@ footer {
 
   .footer__blocs-navs {
     justify-content: flex-end;
-    align-items: center;
     display: flex;
 
     nav {
+      justify-content: flex-end;
+      align-items: center;
       display: flex;
-      justify-content: end;
-      margin-right: 4%;
 
-      li {
-        list-style: none;
-        margin: 0 4%;
-        white-space: nowrap;
+      ul {
+        display: flex;
+        justify-content: end;
+        margin-right: 4%;
 
-        a {
-          color: white;
+        li {
+          list-style: none;
+          margin: 0 4%;
+          white-space: nowrap;
 
-          i {
-            margin-right: 7%;
+          a {
+            color: white;
+
+            i {
+              margin-right: 7%;
+            }
           }
         }
       }
+
+
 
     }
   }
@@ -323,176 +323,85 @@ footer {
     width: 500px;
   }
 
+  footer {
+    font-size: 1.6vw;
+  }
+
 }
 
 @media screen and (max-width: 768px) {
 
   .menu {
-    position: relative;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    font-family: "Shrikhand";
     font-size: 4vw;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-    background-color: white;
 
     h1 {
       margin: 8px;
-      font-weight: normal;
     }
 
     a {
-      position: absolute;
       font-size: 5vw;
-      left: 23px;
     }
   }
 
   .banniere {
-    width: 100%;
     height: 66vw;
-
-    img {
-      height: 100%;
-      z-index: -1;
-      position: relative;
-      width: 100%;
-    }
-
-    &__cover img {
-      object-fit: cover;
-    }
   }
 
   .carte {
-    margin-top: -65px;
-    background-color: #f5f6f6;
-    border-top-right-radius: 30px;
-    border-top-left-radius: 30px;
     padding: 15px 17px;
-    width: 91vw;
+    padding-bottom: 12%;
+    width: 100%;
 
     &__liste {
-      opacity: 0;
       margin-bottom: 13%;
-      text-align: left;
-      animation: 1s cubic-bezier(0.72, -0.71, 0.19, 1.71) forwards swashIn;
       width: auto;
     }
 
     &__nom {
       justify-content: space-around;
-      align-items: center;
-      display: flex;
-      padding: 3%;
       font-size: 5vw;
 
       &__jaime {
-        border: none;
-        background-color: transparent;
-        justify-content: center;
-        display: flex;
-        align-items: center;
         font-size: 5.5vw;
         margin: 0;
-
-        input {
-          position: absolute;
-          z-index: 5;
-          height: 6vw;
-          width: 5vw;
-          opacity: 0;
-        }
-
-        .fa-solid {
-          position: absolute;
-          opacity: 0;
-          transition: opacity 0.4s, font-size 0.2s;
-          z-index: 1;
-          background: -webkit-gradient(linear,
-              left top,
-              left bottom,
-              from(#9356dc),
-              to(#ff79da));
-          background-clip: border-box;
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-        }
-
-        .fa-regular {
-          position: absolute;
-        }
-
-        input[type="checkbox"]:checked+.fa-solid {
-          opacity: 1;
-        }
       }
 
       h2 {
-        font-family: "Shrikhand";
-        margin: 0;
         font-size: 7vw;
-        font-weight: normal;
       }
     }
 
     h3 {
-      font-style: normal;
-      font-weight: 300;
       font-size: 4.5vw;
-      flex-direction: column;
-      display: flex;
-      text-transform: uppercase;
 
-      span {
-        border: 2px solid #99e2d0;
-        margin-top: 4px;
-        width: 7%;
-      }
     }
 
     &__plats {
       margin-bottom: 4%;
-      border-radius: 15px;
-      overflow: hidden;
-      box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
-      background-color: white;
       font-size: 4.5vw;
 
       &__infos {
-        width: 100%;
-        align-items: flex-end;
-        justify-content: space-between;
         height: 18vw;
-        display: flex;
 
         &__div-info {
-          width: 83%;
-          margin: 14px;
+          margin: 3%;
+
+          span {
+            font-weight: 300;
+            margin: 1% 0;
+            white-space: nowrap;
+            overflow: hidden;
+            font-size: 3.9vw;
+            text-overflow: ellipsis;
+          }
         }
 
         span {
           margin: 5%;
         }
 
-        label {
-          margin: 3%;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-        }
-
         p {
-          font-weight: 300;
-          margin: 1% 0;
-          white-space: nowrap;
-          overflow: hidden;
           font-size: 3.9vw;
-          text-overflow: ellipsis;
         }
 
         &:hover .carte__plats__infos__checkbox {
@@ -500,30 +409,9 @@ footer {
         }
 
         &__checkbox {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          background-color: #99e2d0;
-          width: 0%;
-          position: relative;
-          overflow: hidden;
-          height: 100%;
-          cursor: pointer;
-          transition: all 0.3s ease;
-
-          input {
-            z-index: 1;
-            position: absolute;
-            opacity: 0;
-          }
 
           .fa-check {
-            border-radius: 50px;
-            background-color: #ffffff;
             font-size: 4vw;
-            display: flex;
-            padding: 6px;
-            color: #99e2d0;
           }
         }
       }
@@ -533,30 +421,11 @@ footer {
 
   .btn-commander {
     padding: 4% 14%;
-    font-weight: 500;
     font-size: 4vw;
-    line-height: 19px;
-    color: white;
-    background: linear-gradient(0deg, #9356dc -5.2%, #ff79da 110.74%);
-    border: none;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-    border-radius: 50px;
-
-    &:hover {
-      background: linear-gradient(0deg,
-          rgba(255, 255, 255, 0.15),
-          rgba(255, 255, 255, 0.15)),
-        linear-gradient(0deg, #9356dc -5.2%, #ff79da 110.74%);
-      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
-    }
   }
 
   footer {
-    margin-top: 12%;
-    background-color: #353535;
     padding: 5px 25px 25px 15px;
-    color: white;
-    text-align: left;
     font-size: 4vw;
 
     .footer__blocs-navs {
@@ -566,28 +435,30 @@ footer {
       h3 {
         font-family: "Shrikhand";
         font-weight: normal;
+        margin-bottom: unset;
       }
 
       nav {
         display: block;
 
-        li {
+        ul {
+          display: block;
           list-style: none;
-          margin: 7px 0;
+          padding: 0;
 
-          a {
-            color: white;
+          li {
+            margin: 9px 0;
 
-            i {
-              margin-right: 7%;
-              width: 5vw;
+            a {
+
+              i {
+                width: 5vw;
+              }
             }
           }
         }
       }
     }
-
-
   }
 
 

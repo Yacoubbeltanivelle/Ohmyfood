@@ -26,7 +26,7 @@ a {
   justify-content: center;
   align-items: center;
   opacity: 1;
-  animation: overlay 1.2s linear forwards;
+  animation: affichage 1.2s linear forwards; // Animation de l'affichage apparition et disparition
 }
 
 .chargement.hidden {
@@ -49,10 +49,12 @@ a {
   border-radius: 50%;
   border: 6px solid #fff;
   border-color: #9356dc transparent #ff79da transparent;
-  animation: lds-dual-ring 3s linear infinite;
+  animation: cercle-rotation 3s linear infinite; // Animation rotation du cercle
 }
 
-@keyframes lds-dual-ring {
+
+// Animation rotation du cercle
+@keyframes cercle-rotation {
   0% {
     transform: rotate(0deg);
   }
@@ -62,7 +64,8 @@ a {
   }
 }
 
-@keyframes overlay {
+// Animation de l'affichage apparition et disparition
+@keyframes affichage {
   0% {
     opacity: 1;
   }
@@ -304,20 +307,16 @@ a {
         opacity: 0;
         transition: opacity 0.4s, font-size 0.2s;
         z-index: 1;
-        background: -webkit-gradient(linear,
-            left top,
-            left bottom,
-            from(#9356dc),
-            to(#ff79da));
-        background-clip: border-box;
+        background: linear-gradient(to bottom, #9356dc, #ff79da);
+        background-clip: text;
         -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        color: transparent;
       }
 
       .fa-regular {
         position: absolute;
       }
-
+      // Animation du coeur
       input[type="checkbox"]:checked+.fa-solid {
         opacity: 1;
       }
@@ -329,18 +328,39 @@ footer {
   background-color: #353535;
   padding: 25px;
   color: white;
-  /* position: absolute; */
   text-align: left;
 
   .footer__blocs-navs {
     justify-content: flex-end;
-    align-items: center;
     display: flex;
 
     nav {
+      justify-content: flex-end;
+      align-items: center;
       display: flex;
-      justify-content: end;
-      margin-right: 4%;
+
+      ul {
+        display: flex;
+        justify-content: end;
+        margin-right: 4%;
+
+        li {
+          list-style: none;
+          margin: 0 4%;
+          white-space: nowrap;
+
+          a {
+            color: white;
+
+            i {
+              margin-right: 7%;
+            }
+          }
+        }
+      }
+
+
+
     }
   }
 
@@ -348,20 +368,6 @@ footer {
     font-family: "Shrikhand";
     font-weight: normal;
     margin-right: 7%;
-  }
-
-  li {
-    list-style: none;
-    margin: 0 4%;
-    white-space: nowrap;
-  }
-
-  a {
-    color: white;
-  }
-
-  i {
-    width: 31px;
   }
 }
 
@@ -431,8 +437,8 @@ footer {
     background-color: white;
 
     h1 {
-       margin: 8px;
-       font-weight: normal;
+      margin: 8px;
+      font-weight: normal;
     }
   }
 
@@ -444,13 +450,13 @@ footer {
     font-size: 4.5vw;
 
     i {
-        margin-right: 13px;
+      margin-right: 13px;
     }
   }
 
   .h2-description {
     margin: 9% 10% 3% 10%;
-      font-size: 7vw;
+    font-size: 7vw;
 
   }
 
@@ -478,39 +484,39 @@ footer {
 
   .fonctionnement {
     padding: 9% 5%;
-display: block;
-width: auto;
+    display: block;
+    width: auto;
 
     h2 {
-        font-size: 6.5vw;
-        margin: 0;
-        width: auto;
+      font-size: 6.5vw;
+      margin: 0;
+      width: auto;
     }
 
     &__div-infos {
-        display: flex;
-        flex-direction: column;
-        margin-top: 8%;
-        width: auto;
+      display: flex;
+      flex-direction: column;
+      margin-top: 8%;
+      width: auto;
 
-        &__instruction {
-          padding: 27px 0px;
-          font-size: 4.2vw;
-          margin: 0 3% 37px 3%;
-          white-space: nowrap;
+      &__instruction {
+        padding: 27px 0px;
+        font-size: 4.2vw;
+        margin: 0 3% 37px 3%;
+        white-space: nowrap;
 
-            span {
-              left: -17px;
-              width: 7vw;
-              height: 7vw;
-            }
-
-            i {
-              margin-left: 9%;
-margin-right: 6%;
-                color: #7E7E7E;
-            }
+        span {
+          left: -17px;
+          width: 7vw;
+          height: 7vw;
         }
+
+        i {
+          margin-left: 9%;
+          margin-right: 6%;
+          color: #7E7E7E;
+        }
+      }
     }
   }
 
@@ -524,14 +530,14 @@ margin-right: 6%;
 
     h2 {
       width: auto;
-font-size: 7vw;
+      font-size: 7vw;
     }
 
     &__liste {
       display: block;
-margin: auto;
-width: auto;
-height: auto;
+      margin: auto;
+      width: auto;
+      height: auto;
     }
   }
 
@@ -607,30 +613,36 @@ height: auto;
 
     .footer__blocs-navs {
       flex-direction: column-reverse;
-align-items: flex-start;
+      align-items: flex-start;
 
-nav {
-  display: block;
-}
-    }
+      h3 {
+        font-family: "Shrikhand";
+        font-weight: normal;
+        margin-bottom: unset;
+      }
 
-    h3 {
-      font-family: "Shrikhand";
-      font-weight: normal;
-    }
+      nav {
+        display: block;
 
-    li {
-      list-style: none;
-      margin: 7px 0;
-    }
+        ul {
+          display: block;
+          list-style: none;
+          padding: 0;
 
-    a {
-      color: white;
-    }
+          li {
+            margin: 9px 0;
 
-    i {
-      margin-right: 7%;
-      width: 3vw;
+            a {
+              color: white;
+
+              i {
+                margin-right: 7%;
+                width: 5vw;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

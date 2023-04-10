@@ -67,7 +67,7 @@ form {
   opacity: 0;
   margin-bottom: 9%;
   text-align: left;
-  animation: 1s cubic-bezier(0.72, -0.71, 0.19, 1.71) forwards swashIn;
+  animation: 1s cubic-bezier(0.72, -0.71, 0.19, 1.71) forwards apparitions;
 }
 .carte__nom {
   justify-content: center;
@@ -97,10 +97,10 @@ form {
   opacity: 0;
   transition: opacity 0.4s, font-size 0.2s;
   z-index: 1;
-  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
-  background-clip: border-box;
+  background: linear-gradient(to bottom, #9356dc, #ff79da);
+  background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 .carte__nom__jaime .fa-regular {
   position: absolute;
@@ -116,7 +116,6 @@ form {
 .carte h3 {
   font-style: normal;
   font-weight: 300;
-  /* font-size: 4.5vw; */
   flex-direction: column;
   display: flex;
   text-transform: uppercase;
@@ -143,16 +142,13 @@ form {
 }
 .carte__plats__infos__div-info {
   width: 83%;
-  font-size: 1.17;
   margin: 14px;
-}
-.carte__plats__infos span {
-  margin: 16px;
-}
-.carte__plats__infos label {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+.carte__plats__infos span {
+  margin: 16px;
 }
 .carte__plats__infos p {
   font-weight: 300;
@@ -190,7 +186,7 @@ form {
   color: #99e2d0;
 }
 
-@keyframes swashIn {
+@keyframes apparitions {
   0% {
     opacity: 0;
     transform-origin: 50% 50%;
@@ -243,23 +239,27 @@ footer {
 }
 footer .footer__blocs-navs {
   justify-content: flex-end;
-  align-items: center;
   display: flex;
 }
 footer .footer__blocs-navs nav {
+  justify-content: flex-end;
+  align-items: center;
+  display: flex;
+}
+footer .footer__blocs-navs nav ul {
   display: flex;
   justify-content: end;
   margin-right: 4%;
 }
-footer .footer__blocs-navs nav li {
+footer .footer__blocs-navs nav ul li {
   list-style: none;
   margin: 0 4%;
   white-space: nowrap;
 }
-footer .footer__blocs-navs nav li a {
+footer .footer__blocs-navs nav ul li a {
   color: white;
 }
-footer .footer__blocs-navs nav li a i {
+footer .footer__blocs-navs nav ul li a i {
   margin-right: 7%;
 }
 footer h3 {
@@ -277,147 +277,60 @@ footer h3 {
   .carte__liste {
     width: 500px;
   }
+
+  footer {
+    font-size: 1.6vw;
+  }
 }
 @media screen and (max-width: 768px) {
   .menu {
-    position: relative;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    font-family: "Shrikhand";
     font-size: 4vw;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-    background-color: white;
   }
   .menu h1 {
     margin: 8px;
-    font-weight: normal;
   }
   .menu a {
-    position: absolute;
     font-size: 5vw;
-    left: 23px;
   }
 
   .banniere {
-    width: 100%;
     height: 66vw;
-  }
-  .banniere img {
-    height: 100%;
-    z-index: -1;
-    position: relative;
-    width: 100%;
-  }
-  .banniere__cover img {
-    object-fit: cover;
   }
 
   .carte {
-    margin-top: -65px;
-    background-color: #f5f6f6;
-    border-top-right-radius: 30px;
-    border-top-left-radius: 30px;
     padding: 15px 17px;
-    width: 91vw;
+    padding-bottom: 12%;
+    width: 100%;
   }
   .carte__liste {
-    opacity: 0;
     margin-bottom: 13%;
-    text-align: left;
-    animation: 1s cubic-bezier(0.72, -0.71, 0.19, 1.71) forwards swashIn;
     width: auto;
   }
   .carte__nom {
     justify-content: space-around;
-    align-items: center;
-    display: flex;
-    padding: 3%;
     font-size: 5vw;
   }
   .carte__nom__jaime {
-    border: none;
-    background-color: transparent;
-    justify-content: center;
-    display: flex;
-    align-items: center;
     font-size: 5.5vw;
     margin: 0;
   }
-  .carte__nom__jaime input {
-    position: absolute;
-    z-index: 5;
-    height: 6vw;
-    width: 5vw;
-    opacity: 0;
-  }
-  .carte__nom__jaime .fa-solid {
-    position: absolute;
-    opacity: 0;
-    transition: opacity 0.4s, font-size 0.2s;
-    z-index: 1;
-    background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
-    background-clip: border-box;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  .carte__nom__jaime .fa-regular {
-    position: absolute;
-  }
-  .carte__nom__jaime input[type=checkbox]:checked + .fa-solid {
-    opacity: 1;
-  }
   .carte__nom h2 {
-    font-family: "Shrikhand";
-    margin: 0;
     font-size: 7vw;
-    font-weight: normal;
   }
   .carte h3 {
-    font-style: normal;
-    font-weight: 300;
     font-size: 4.5vw;
-    flex-direction: column;
-    display: flex;
-    text-transform: uppercase;
-  }
-  .carte h3 span {
-    border: 2px solid #99e2d0;
-    margin-top: 4px;
-    width: 7%;
   }
   .carte__plats {
     margin-bottom: 4%;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
-    background-color: white;
     font-size: 4.5vw;
   }
   .carte__plats__infos {
-    width: 100%;
-    align-items: flex-end;
-    justify-content: space-between;
     height: 18vw;
-    display: flex;
   }
   .carte__plats__infos__div-info {
-    width: 83%;
-    margin: 14px;
-  }
-  .carte__plats__infos span {
-    margin: 5%;
-  }
-  .carte__plats__infos label {
     margin: 3%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
   }
-  .carte__plats__infos p {
+  .carte__plats__infos__div-info span {
     font-weight: 300;
     margin: 1% 0;
     white-space: nowrap;
@@ -425,57 +338,26 @@ footer h3 {
     font-size: 3.9vw;
     text-overflow: ellipsis;
   }
+  .carte__plats__infos span {
+    margin: 5%;
+  }
+  .carte__plats__infos p {
+    font-size: 3.9vw;
+  }
   .carte__plats__infos:hover .carte__plats__infos__checkbox {
     width: 30%;
   }
-  .carte__plats__infos__checkbox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #99e2d0;
-    width: 0%;
-    position: relative;
-    overflow: hidden;
-    height: 100%;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  .carte__plats__infos__checkbox input {
-    z-index: 1;
-    position: absolute;
-    opacity: 0;
-  }
   .carte__plats__infos__checkbox .fa-check {
-    border-radius: 50px;
-    background-color: #ffffff;
     font-size: 4vw;
-    display: flex;
-    padding: 6px;
-    color: #99e2d0;
   }
 
   .btn-commander {
     padding: 4% 14%;
-    font-weight: 500;
     font-size: 4vw;
-    line-height: 19px;
-    color: white;
-    background: linear-gradient(0deg, #9356dc -5.2%, #ff79da 110.74%);
-    border: none;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-    border-radius: 50px;
-  }
-  .btn-commander:hover {
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(0deg, #9356dc -5.2%, #ff79da 110.74%);
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
   }
 
   footer {
-    margin-top: 12%;
-    background-color: #353535;
     padding: 5px 25px 25px 15px;
-    color: white;
-    text-align: left;
     font-size: 4vw;
   }
   footer .footer__blocs-navs {
@@ -485,19 +367,20 @@ footer h3 {
   footer .footer__blocs-navs h3 {
     font-family: "Shrikhand";
     font-weight: normal;
+    margin-bottom: unset;
   }
   footer .footer__blocs-navs nav {
     display: block;
   }
-  footer .footer__blocs-navs nav li {
+  footer .footer__blocs-navs nav ul {
+    display: block;
     list-style: none;
-    margin: 7px 0;
+    padding: 0;
   }
-  footer .footer__blocs-navs nav li a {
-    color: white;
+  footer .footer__blocs-navs nav ul li {
+    margin: 9px 0;
   }
-  footer .footer__blocs-navs nav li a i {
-    margin-right: 7%;
+  footer .footer__blocs-navs nav ul li a i {
     width: 5vw;
   }
 }
